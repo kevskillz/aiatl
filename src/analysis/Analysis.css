@@ -1,0 +1,64 @@
+/* Analysis.css */
+
+.outer-flex {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Analysis.css */
+
+.info-window {
+    background-color: rgb(30, 30, 30, 0.9); /* Dark background with transparency */
+    color: white; /* Text color */
+    padding: 5px; /* Reduced padding */
+    border-radius: 5px; /* Rounded corners */
+    font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+.info-window h3 {
+    color: white; /* Blue color for heading */
+    margin: 0; /* Remove default margin */
+    font-weight: bold; /* Bold text */
+}
+
+.info-window p {
+    margin: 5px 0 0; /* Margin for the paragraph */
+}
+
+/* Ensure no default margins or padding interfere */
+.google-maps-info-window {
+    margin: 0 !important; /* Remove default margin */
+    padding: 0 !important; /* Remove default padding */
+    background-color: transparent !important; /* Make sure background is transparent */
+}
+
+
+.analysis-container {
+    display: flex;
+    background-color: #1e1e1e; /* Dark background */
+    color: #ffffff; /* White text */
+    height: 100vh; /* Full height of the viewport */
+    flex-direction: row;
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .map-header {
+    color: #61dafb; /* Blue text for the header */
+    margin-bottom: 10px; /* Space below the header */
+  }
+  
+  .map-container {
+    width: 30vw; /* Fixed width for the map */
+    flex: 1;
+    height: 30vw; /* Fixed height for the map */
+    border: 4px solid #61dafb; /* Blue border */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensure corners are rounded properly */
+    margin: 20px; /* Add some spacing */
+  }
+  
+  h1 {
+    font-size: 2rem; /* Adjust font size as needed */
+    color: #61dafb; /* Blue text for the heading */
+  }  

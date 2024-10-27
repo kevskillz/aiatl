@@ -1,0 +1,24 @@
+.proceed-button {
+    padding: 15px 30px; /* Adjust padding for button size */
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    background-color: #61dafb; /* Button color */
+    color: #000; /* Text color */
+    font-size: 16px; /* Font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for background and scale */
+    position: absolute; /* Positioning the button */
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Offset to center */
+    box-shadow: 0 4px 6px rgba(86, 75, 75, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .proceed-button:hover {
+    background-color: #4ba8e2; /* Darker shade on hover */
+  }
+  
+  .proceed-button:focus {
+    outline: none; /* Remove default focus outline */
+  }
+  

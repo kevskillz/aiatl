@@ -1,0 +1,68 @@
+{
+    "katrina": {
+        "name": "Katrina",
+        "maxSpeed": 50,
+        "color": "red",
+        "points": [
+            {
+                "lat": 27.0,
+                "lng": -80.0,
+                "r": 200
+            },
+            {
+                "lat": 27.1,
+                "lng": -81.0,
+                "r": 150
+            },
+            {
+                "lat": 27.2,
+                "lng": -82.0,
+                "r": 100
+            }
+        ]
+    },
+    "harvey": {
+        "name": "Harvey",
+        "maxSpeed": 60,
+        "color": "blue",
+        "points": [
+            {
+                "lat": 29.0,
+                "lng": -95.0,
+                "r": 250
+            },
+            {
+                "lat": 29.1,
+                "lng": -96.0,
+                "r": 180
+            },
+            {
+                "lat": 28.9,
+                "lng": -94.5,
+                "r": 120
+            }
+        ]
+    },
+    "irma": {
+        "name": "Irma",
+        "maxSpeed": 65,
+        "color": "green",
+        "points": [
+            {
+                "lat": 25.5,
+                "lng": -80.5,
+                "r": 300
+            },
+            {
+                "lat": 25.6,
+                "lng": -81.0,
+                "r": 220
+            },
+            {
+                "lat": 25.7,
+                "lng": -81.5,
+                "r": 160
+            }
+        ]
+    }
+}

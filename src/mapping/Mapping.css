@@ -1,0 +1,81 @@
+.SearchAddress {
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Allows absolute positioning of child elements */
+  width: 100%;
+  flex: 7;
+  background-color: #1e1e1e; /* Dark background for the search area */
+  color: #ffffff; /* White text */
+}
+
+.search-container {
+  position: absolute; /* Positioning the search bar at the top left */
+  top: 20px; /* Space from the top */
+  left: 20px; /* Space from the left */
+  z-index: 1000; /* Ensure it's on top of the map */
+}
+
+.location-search-input {
+  width: 300px; /* Adjust the width as needed */
+  padding: 10px 15px;
+  border: 2px solid #444; /* Darker border */
+  border-radius: 25px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  background-color: #2c2c2c; /* Dark input background */
+  color: #ffffff; /* White text in input */
+  transition: border-color 0.3s; /* Smooth border transition */
+}
+
+.location-search-input:focus {
+  border-color: #61dafb; /* Blue border on focus */
+  outline: none; /* Remove default outline */
+}
+
+.autocomplete-dropdown-container {
+  border: 1px solid #444; /* Darker border */
+  border-radius: 0 0 25px 25px; /* Match the input's border radius */
+  margin-top: 5px;
+  width: 300px; /* Match the input's width */
+  background-color: #2c2c2c; /* Dark dropdown background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Dropdown shadow */
+  z-index: 1000; /* Ensure dropdown appears above other elements */
+  opacity: 0; /* Start with hidden dropdown */
+  transition: opacity 0.3s ease; /* Smooth opacity transition */
+  position: absolute; /* Absolute positioning */
+}
+
+.autocomplete-dropdown-container.visible {
+  opacity: 1; /* Make dropdown visible */
+}
+
+.suggestion-item {
+  padding: 10px; /* Ensure consistent padding */
+  cursor: pointer;
+  color: #ffffff; /* White text for suggestions */
+  transition: background-color 0.2s ease; /* Smooth background transition */
+  height: 40px; /* Set a fixed height for each item */
+  line-height: 20px; /* Consistent line-height */
+}
+
+.suggestion-item:hover {
+  padding: 10px; /* Ensure consistent padding */
+  cursor: pointer;
+  color: #ffffff; /* White text for suggestions */
+  transition: background-color 0.2s ease; /* Smooth background transition */
+  height: 40px; /* Set a fixed height for each item */
+  line-height: 20px; /* Consistent line-height */
+  
+  background-color: #444; /* Highlight on hover */
+}
+
+.suggestion-item--active {
+  padding: 10px; /* Ensure consistent padding */
+  cursor: pointer;
+  color: #ffffff; /* White text for suggestions */
+  transition: background-color 0.2s ease; /* Smooth background transition */
+  height: 40px; /* Set a fixed height for each item */
+  line-height: 20px; /* Consistent line-height */
+
+  background-color: #61dafb; /* Active item highlight */
+  color: #000; /* Change text color for active item */
+}

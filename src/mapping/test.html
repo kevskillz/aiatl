@@ -1,0 +1,82 @@
+<div id="viewDiv"></div>
+
+<script type="module">
+    import ArcGISMap from "https://js.arcgis.com/4.28/@arcgis/core/Map.js";
+    import MapView from "https://js.arcgis.com/4.28/@arcgis/core/views/MapView.js";
+    import FeatureLayer from "https://js.arcgis.com/4.28/@arcgis/core/layers/FeatureLayer.js";
+    import Legend from "https://js.arcgis.com/4.28/@arcgis/core/widgets/Legend.js";
+
+    // Create the map
+    const map = new ArcGISMap({
+        basemap: "streets-vector"
+    });
+
+    // Create the view
+    const view = new MapView({
+        container: "viewDiv",
+        map: map,
+        zoom: 10,
+        center: [-80, 20] // Centered based on the provided extent
+    });
+
+    // Define the renderer exactly as specified in the documentation
+    const renderer = {
+        type: "simple",
+        symbol: {
+            type: "simple-fill",
+            style: "solid",
+            color: [252, 209, 220, 255],
+            outline: {
+                type: "simple-line",
+                style: "solid",
+                color: [110, 110, 110, 255],
+                width: 0.7
+            }
+        }
+    };
+
+    // Create popup template
+    const popupTemplate = {
+        title: "Sea Level Rise Impact",
+        content: [
+            {
+                type: "fields",
+                fieldInfos: [
+                    {
+                        fieldName: "ID",
+                        label: "Id"
+                    },
+                    {
+                        fieldName: "Grid_Code",
+                        label: "Grid Code"
+                    }
+                ]
+            }
+        ]
+    };
+    //www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_3ft/MapServer
+    // Create the Feature Layer
+    const featureLayer = new FeatureLayer({
+        //url: "https://services6.arcgis.com/T8eS7sop5hLmgRRH/arcgis/rest/services/3_ft_Sea_Level_Rise/FeatureServer",
+        //url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_3ft/MapServer",
+        //url: "https://coast.noaa.gov/arcgis/rest/services/dc_slr/slr_3ft/MapServer",
+        url: "https://www.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_1ft/MapServer/0",
+        //url: "https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/slr_1ft/MapServer/12",
+        popupTemplate: popupTemplate,
+        outFields: ["ID", "Grid_Code"],
+        title: "3 ft Sea Level Rise",
+        opacity: 0.5
+    });
+
+
+    // Add the Feature Layer to the map
+    map.add(featureLayer);
+
+
+    // Add a legend
+    const legend = new Legend({
+        view: view
+    });
+
+    view.ui.add(legend, "bottom-left");
+</script>
